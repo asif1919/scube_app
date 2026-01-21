@@ -3,6 +3,7 @@ import 'core/constants/app_routes.dart';
 import 'presentation/login/login_screen.dart';
 import 'presentation/splash/splash_screen.dart';
 import 'presentation/dashboard/dashboard.dart';
+import 'presentation/second_page/second_page_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -25,6 +26,7 @@ class MyApp extends StatelessWidget {
         AppRoutes.splash: (context) => const SplashScreen(),
         AppRoutes.login: (context) => const LoginScreen(),
         AppRoutes.dashboard: (context) => const DashboardScreen(),
+        AppRoutes.secondPage: (context) => const SecondPageScreen(),
       },
     );
   }

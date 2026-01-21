@@ -1,29 +1,31 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import '../../../core/constants/app_colors.dart';
+import '../../../../core/constants/app_colors.dart';
 
-class SummaryTile extends StatelessWidget {
-  final String assetPath;
+class MetricCard extends StatelessWidget {
   final String title;
-  final String value;
+  final String subtitle;
+  final String assetPath;
+  final Color iconBackground;
 
-  const SummaryTile({
+  const MetricCard({
     super.key,
-    required this.assetPath,
     required this.title,
-    required this.value,
+    required this.subtitle,
+    required this.assetPath,
+    required this.iconBackground,
   });
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(5),
+      padding: const EdgeInsets.symmetric(horizontal: 5),
       decoration: BoxDecoration(
         color: AppColors.cardBackground,
         borderRadius: BorderRadius.circular(5),
         boxShadow: const [
           BoxShadow(
-            color: Color.fromRGBO(0, 0, 0, 0.04),
+            color: Color.fromRGBO(0, 0, 0, 0.05),
             blurRadius: 8,
             offset: Offset(0, 2),
           ),
@@ -31,39 +33,36 @@ class SummaryTile extends StatelessWidget {
       ),
       child: Row(
         children: [
-          SizedBox(
+          Image.asset(
+            assetPath,
             width: 22,
             height: 22,
-            child: Image.asset(
-              assetPath,
-              fit: BoxFit.contain,
-            ),
           ),
-          const SizedBox(width: 10),
+          const SizedBox(width: 5),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisSize: MainAxisSize.min,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
                   title,
                   style: GoogleFonts.inter(
-                    fontSize: 10,
-                    fontWeight: FontWeight.w600,
-                    color: AppColors.textSecondary,
-                  ),
-                  maxLines: 1,
-                  overflow: TextOverflow.ellipsis,
-                ),
-                const SizedBox(height: 2),
-                Text(
-                  value,
-                  style: GoogleFonts.inter(
-                    fontSize: 10,
+                    fontSize: 12,
                     fontWeight: FontWeight.w700,
                     color: AppColors.textPrimary,
                   ),
                   maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                ),
+                const SizedBox(height: 0),
+                Text(
+                  subtitle,
+                  style: GoogleFonts.inter(
+                    fontSize: 9,
+                    fontWeight: FontWeight.w500,
+                    color: AppColors.textSecondary,
+                  ),
+                  maxLines: 2,
                   overflow: TextOverflow.ellipsis,
                 ),
               ],

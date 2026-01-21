@@ -13,5 +13,8 @@ class AppRoutes {
 
   /// Dashboard (1st Page) route
   static const String dashboard = '/dashboard';
+
+  /// Second Page route
+  static const String secondPage = '/second-page';
 }
 

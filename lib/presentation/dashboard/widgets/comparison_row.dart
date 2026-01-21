@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import '../../../core/constants/app_colors.dart';
+import '../../../../core/constants/app_colors.dart';
 
 class ComparisonRow extends StatelessWidget {
   final String label;
@@ -47,7 +47,7 @@ class ComparisonRow extends StatelessWidget {
             flex: 3,
             child: Text(
               yesterdayValue,
-              textAlign: TextAlign.left, // Aligned right
+              textAlign: TextAlign.left,
               style: GoogleFonts.inter(
                 fontSize: 12,
                 fontWeight: FontWeight.w700,
@@ -59,7 +59,7 @@ class ComparisonRow extends StatelessWidget {
             flex: 3,
             child: Text(
               todayValue,
-              textAlign: TextAlign.right, // Aligned right
+              textAlign: TextAlign.right,
               style: GoogleFonts.inter(
                 fontSize: 12,
                 fontWeight: FontWeight.w700,

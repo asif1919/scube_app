@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import '../../../core/constants/app_colors.dart';
+import '../../../../core/constants/app_colors.dart';
 
 class InverterCard extends StatelessWidget {
   final String title;
   final String capacityText;
   final String lifetimeEnergy;
-  final String previousEnergy;
   final String todayEnergy;
+  final String prevMeterEnergy;
   final String livePower;
 
   const InverterCard({
@@ -15,8 +15,8 @@ class InverterCard extends StatelessWidget {
     required this.title,
     required this.capacityText,
     required this.lifetimeEnergy,
-    required this.previousEnergy,
     required this.todayEnergy,
+    required this.prevMeterEnergy,
     required this.livePower,
   });
 
@@ -66,15 +66,14 @@ class InverterCard extends StatelessWidget {
                     style: GoogleFonts.inter(
                       fontSize: 10,
                       fontWeight: FontWeight.w700,
-                      color: const Color(
-                        0xFF0684D9,
-                      ), // Specific blue from image
+                      color: const Color(0xFF0684D9),
                     ),
                   ),
                 ],
               ),
             ],
-          ), const SizedBox(height: 3),
+          ),
+          const SizedBox(height: 3),
           Divider(
             color: AppColors.borderLight,
             thickness: 1.5,
@@ -92,7 +91,7 @@ class InverterCard extends StatelessWidget {
               _MetricTile(
                 assetPath: 'assets/dashboard/Group 1000011031.png',
                 title: 'Today Energy',
-                value: '$previousEnergy MWh',
+                value: '$todayEnergy kWh',
               ),
             ],
           ),
@@ -102,13 +101,13 @@ class InverterCard extends StatelessWidget {
               _MetricTile(
                 assetPath: 'assets/dashboard/Group 1000010988.png',
                 title: 'Prev. Meter Energy',
-                value: '$todayEnergy kWh',
+                value: '$prevMeterEnergy MWh',
               ),
               const SizedBox(width: 12),
               _MetricTile(
                 assetPath: 'assets/dashboard/Group 1000010987.png',
                 title: 'Live Power',
-                value: '$livePower kW',
+                value: '$livePower MWh',
               ),
             ],
           ),
@@ -133,7 +132,7 @@ class _MetricTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
       child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 10,  ),
+        padding: const EdgeInsets.symmetric(horizontal: 10),
         decoration: BoxDecoration(
           color: AppColors.white,
           borderRadius: BorderRadius.circular(10),
