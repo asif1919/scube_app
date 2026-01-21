@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../../core/constants/app_colors.dart';
 import '../../core/constants/app_constants.dart';
+import '../../core/constants/app_routes.dart';
 import '../widgets/logo_header.dart';
 import '../widgets/custom_text_field.dart';
 import '../widgets/password_field.dart';
@@ -130,7 +131,12 @@ class _LoginScreenState extends State<LoginScreen>
                           CustomButton(
                             height: 60,
                             text: 'Login',
-                            onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushReplacementNamed(
+                            context,
+                            AppRoutes.dashboard,
+                          );
+                        },
                           ),
 
                           const SizedBox(height: 10),

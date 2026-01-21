@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import '../../core/constants/app_colors.dart';
 import '../../core/constants/app_constants.dart';
-import '../login/login_screen.dart';
+import '../../core/constants/app_routes.dart';
 import '../widgets/logo_header.dart';
-  
+
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
 
@@ -15,14 +15,10 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    // Navigate to login screen after 1 seconds
+    // Navigate to login screen after 1 second
     Future.delayed(const Duration(seconds: 1), () {
       if (mounted) {
-        Navigator.of(context).pushReplacement(
-          MaterialPageRoute(
-            builder: (context) => const LoginScreen(),
-          ),
-        );
+        Navigator.of(context).pushReplacementNamed(AppRoutes.login);
       }
     });
   }
