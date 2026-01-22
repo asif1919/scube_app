@@ -20,10 +20,14 @@ A Flutter mobile application built with Clean Architecture principles for SCUBE 
 ```
 lib/
 ├── core/
-│   └── constants/          # App constants and colors
+│   └── constants/          # App constants, colors, and routes
 ├── presentation/
 │   ├── splash/             # Splash screen
 │   ├── login/              # Login screen
+│   ├── dashboard/          # Dashboard screen
+│   │   └── widgets/        # Dashboard-specific widgets
+│   ├── second_page/        # Second page screen
+│   │   └── widgets/        # Second page-specific widgets
 │   └── widgets/            # Reusable UI widgets
 └── main.dart               # App entry point
 ```
