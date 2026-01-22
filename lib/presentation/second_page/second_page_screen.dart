@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
-import '../../core/constants/app_colors.dart';
-import 'widgets/widgets.dart';
+import 'package:scube_app/core/constants/app_colors.dart';
+import 'package:scube_app/core/constants/app_routes.dart';
+import 'package:scube_app/presentation/widgets/custom_app_bar.dart';
+import 'package:scube_app/presentation/widgets/navigate_button.dart';
+import 'package:scube_app/presentation/second_page/widgets/widgets.dart';
 
 class SecondPageScreen extends StatelessWidget {
   const SecondPageScreen({super.key});
@@ -9,22 +12,28 @@ class SecondPageScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.dashboardBackground,
-      appBar: const SecondPageAppBar(),
-      body: const SingleChildScrollView(
+      appBar: const CustomAppBar(
+        title: '2nd Page',
+      ),
+      body: SingleChildScrollView(
         child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 10),
+        padding: const EdgeInsets.symmetric(horizontal: 10),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: [SizedBox(height: 10),
+            children: [const SizedBox(height: 12),
               Padding(
-                padding: EdgeInsets.symmetric(horizontal:  0),
-                child: FirstPageNavigateButton(),
+                padding: const EdgeInsets.symmetric(horizontal:  0),
+                child: NavigateButton(
+                  text: '1st Page Navigate',
+                  onTap: () {
+                    Navigator.pushReplacementNamed(context, AppRoutes.dashboard);
+                  },
+                ),
               ),
-              SizedBox(height: 10),
-              ElectricitySection(),
-              SizedBox(height: 16),
-              BottomActionGrid(),
-              SizedBox(height: 20),
+              const SizedBox(height: 12),
+              const ElectricitySection(), 
+              const BottomActionGrid(),
+              const SizedBox(height: 20),
             ],
           ),
         ),

@@ -2,56 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../../../core/constants/app_colors.dart';
 
-class DataViewList extends StatelessWidget {
-  const DataViewList({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: const [
-        DataViewCard(
-          iconPath: 'assets/dashboard 2/solar-cell_5575136 1.png',
-          title: 'Data View',
-          status: 'Active',
-          isActive: true,
-          data1: '55505.63',
-          data2: '58805.63',
-          color: AppColors.splashBackground,
-        ),
-        SizedBox(height: 10),
-        DataViewCard(
-          iconPath: 'assets/dashboard 2/Asset 2@4x-8 3.png',
-          title: 'Data Type 2',
-          status: 'Active',
-          isActive: true,
-          data1: '55505.63',
-          data2: '58805.63',
-          color: Color(0xFFFFA500),
-        ),
-        SizedBox(height: 10),
-        DataViewCard(
-          iconPath: 'assets/dashboard 2/power_15679163 1.png',
-          title: 'Data Type 3',
-          status: 'Inactive',
-          isActive: false,
-          data1: '55505.63',
-          data2: '58805.63',
-          color: Color(0xFF00C0E8),
-        ),
-        DataViewCard(
-          iconPath: 'assets/dashboard 2/solar-cell_5575136 1.png',
-          title: 'Total Solar',
-          status: 'Inactive',
-          isActive: false,
-          data1: '55505.63 kW',
-          data2: '58805.63 kWh',
-          color: Color(0xFF00C0E8),
-        ),
-      ],
-    );
-  }
-}
-
 class DataViewCard extends StatelessWidget {
   final String iconPath;
   final String title;
@@ -81,7 +31,32 @@ class DataViewCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final defaultBackgroundColor = AppColors.splashBackground.withAlpha(25);
+
     
+    // Logic for Row 1
+    String label1;
+    if (data1 != null) {
+      label1 = 'Data 1    : ';
+    } else if (livePower != null) {
+      label1 = 'Live Power      : '; // Preserving your specific spacing
+    } else {
+      label1 = 'Live Power';
+    }
+    final String value1 = data1 ?? livePower ?? '';
+
+    // Logic for Row 2
+    String label2;
+    if (data2 != null) {
+      label2 = 'Data 2    : ';
+    } else if (todayEnergy != null) {
+      label2 = 'Today Energy : ';
+    } else {
+      label2 = 'Today Energy';
+    }
+    final String value2 = data2 ?? todayEnergy ?? '';
+    
+    // ----------------------------------------------------
+
     return Container(
       margin: EdgeInsets.zero,
       padding: const EdgeInsets.all(7),
@@ -89,8 +64,8 @@ class DataViewCard extends StatelessWidget {
         color: backgroundColor ?? defaultBackgroundColor,
         borderRadius: BorderRadius.circular(4),
         border: Border.all(
-          color: const Color.fromARGB(255, 147, 147, 147),
-          width: 0.5,
+          color: AppColors.textSecondary.withAlpha(75),
+          width: 1.5,
         ),
       ),
       child: Row(
@@ -101,6 +76,7 @@ class DataViewCard extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                // Title Row
                 Row(
                   children: [
                     Container(
@@ -116,47 +92,27 @@ class DataViewCard extends StatelessWidget {
                       title,
                       style: GoogleFonts.inter(
                         fontSize: 14,
-                        fontWeight: FontWeight.w700,
+                        fontWeight: FontWeight.w600,
                         color: AppColors.textPrimary,
                       ),
                     ),
-                    const SizedBox(width: 8),
+                    const SizedBox(width: 5),
                     Text(
-                      '($status)',
+                      ' ($status)',
                       style: GoogleFonts.inter(
                         fontSize: 10,
-                        fontWeight: FontWeight.w500,
+                        fontWeight: FontWeight.w600,
                         color: isActive ? const Color(0xFF0684D9) : Colors.red,
                       ),
                     ),
                   ],
                 ),
                 const SizedBox(height: 8),
-                Text(
-                  data1 != null
-                      ? 'Data 1 : $data1'
-                      : livePower != null
-                          ? 'Live Power : $livePower'
-                          : 'Live Power',
-                  style: GoogleFonts.inter(
-                    fontSize: 12,
-                    fontWeight: FontWeight.w500,
-                    color: AppColors.textSecondary,
-                  ),
-                ),
+
+                // 2. Use the helper method for cleaner UI code
+                _buildInfoRow(label1, value1),
                 const SizedBox(height: 4),
-                Text(
-                  data2 != null
-                      ? 'Data 2 : $data2'
-                      : todayEnergy != null
-                          ? 'Today Energy : $todayEnergy'
-                          : 'Today Energy',
-                  style: GoogleFonts.inter(
-                    fontSize: 12,
-                    fontWeight: FontWeight.w500,
-                    color: AppColors.textSecondary,
-                  ),
-                ),
+                _buildInfoRow(label2, value2),
               ],
             ),
           ),
@@ -164,6 +120,31 @@ class DataViewCard extends StatelessWidget {
             Icons.arrow_forward_ios,
             size: 16,
             color: AppColors.textSecondary,
+          ),
+        ],
+      ),
+    );
+  }
+
+  // 3. Reusable Helper Method for the Data Rows
+  Widget _buildInfoRow(String label, String value) {
+    return Text.rich(
+      TextSpan(
+        style: GoogleFonts.inter(
+          fontSize: 12,
+          fontWeight: FontWeight.w500,
+        ),
+        children: [
+          TextSpan(
+            text: label,
+            style: TextStyle(color: AppColors.textSecondary),
+          ),
+          TextSpan(
+            text: value,
+            style: const TextStyle(
+              color: Colors.black, // Value color is Black
+              fontWeight: FontWeight.w600,
+            ),
           ),
         ],
       ),
