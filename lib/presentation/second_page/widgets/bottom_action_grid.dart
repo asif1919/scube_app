@@ -73,11 +73,11 @@ class ActionButton extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 5),
       decoration: BoxDecoration(
-        color: const Color(0xFFF9FAFB),
+        color: AppColors.backgroundLightGrey,
         borderRadius: BorderRadius.circular(8),
          
         border: Border.all( 
-          color: const Color(0xFFD1D5DB),  
+          color: AppColors.borderGrey,  
           width: 1.5, 
         ), 
       ),

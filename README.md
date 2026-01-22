@@ -2,19 +2,7 @@
 
 A Flutter mobile application built with Clean Architecture principles for SCUBE Control & Monitoring System.
 
-## Features
-
-- ✨ **Splash Screen** - Beautiful animated splash screen with app branding
-- 🔐 **Login Screen** - Modern login interface with slide-up animation
-- 📊 **Dashboard Screen** - Comprehensive monitoring dashboard with metrics, weather, and inverter data
-- 📈 **Second Page Screen** - Detailed electricity monitoring with tabbed views (Summary, SLD, Data)
-- 🎨 **Clean Architecture** - Well-structured codebase following Clean Architecture principles
-- 📱 **Responsive Design** - Optimized for various screen sizes
-- 🎭 **Smooth Animations** - Elegant slide-up animations for better UX
-- ♻️ **Reusable Widgets** - Modular and reusable UI components
-- 📑 **Tab Navigation** - Tab-based navigation for organized content views
-- 📜 **Custom Scrollbars** - Custom draggable scrollbars for better UX
-
+ 
 ## Project Structure
 
 ```
@@ -95,62 +83,6 @@ This project follows **Clean Architecture** principles:
 </tr>
 </table>
 
-### Splash Screen
-- Blue background (#0096FC)
-- App logo and branding
-- Smooth transition to login
-
-### Login Screen
-- Blue header section with logo
-- White form section with slide-up animation
-- Username and password fields
-- Forgot password and registration links
-
-### Dashboard Screen
-- Comprehensive metrics display (Total Energy, Plant Generation, Live AC Power, etc.)
-- Weather section with temperature, wind, and irradiation data
-- Inverter list with detailed cards showing energy metrics
-- Navigation to second page
-
-### Second Page Screen
-- Tab-based navigation (Summary, SLD, Data)
-- Electricity monitoring with donut chart
-- Source/Load toggle functionality
-- Scrollable data view cards with custom scrollbar
-- Bottom action grid for quick actions
-
-## Widgets
-
-### Reusable Components
-
-#### Core Widgets
-- `LogoHeader` - App logo and branding section
-- `CustomTextField` - Styled text input field
-- `PasswordField` - Password input with visibility toggle
-- `CustomButton` - Primary action button
-- `UnderlinedTextButton` - Link-style button
-- `SectionTitle` - Section heading widget
-- `CustomAppBar` - Reusable AppBar with back button and notifications
-- `NavigateButton` - Reusable navigation button component
-
-#### Dashboard Widgets
-- `MetricCard` - Display metric values with icons/images
-- `InverterCard` - Inverter information card
-- `ComparisonRow` - Comparison data row widget
-- `SummaryTile` - Summary information tile
-
-#### Second Page Widgets
-- `ElectricityTabBar` - Tab bar for Summary/SLD/Data tabs
-- `ElectricityDonutChart` - Circular progress chart for power display
-- `SourceLoadToggle` - Toggle between Source and Load views
-- `ScrollableDataViewList` - Scrollable list of data view cards
-- `SummaryTabView` - Summary tab content view
-- `EmptyTabView` - Placeholder for empty tabs
-- `CustomScrollbar` - Custom draggable scrollbar widget
-- `DataViewCard` - Card displaying data metrics
-- `BottomActionGrid` - Grid of action buttons
-
-## Development
 
 ### Code Style
 
@@ -170,19 +102,5 @@ flutter build ios
 # Build Web
 flutter build web
 ```
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## License
-
-This project is open source and available under the MIT License.
-
-## Author
-
-SCUBE Development Team
-
----
 
 Made with ❤️ using Flutter

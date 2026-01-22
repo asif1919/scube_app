@@ -34,20 +34,20 @@ class CustomTextField extends StatelessWidget {
       decoration: InputDecoration(
         hintText: hintText,
         hintStyle: GoogleFonts.inter(
-          color: Colors.grey[600],
+          color: AppColors.grey600,
           fontSize: 14,
         ),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(10),
           borderSide: BorderSide(
-            color: Colors.grey[600]!,
+            color: AppColors.grey600,
             width: 1,
           ),
         ),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
           borderSide: BorderSide(
-            color: Colors.grey[400]!,
+            color: AppColors.grey400,
             width: 1,
           ),
         ),
@@ -59,7 +59,7 @@ class CustomTextField extends StatelessWidget {
           ),
         ),
         filled: true,
-        fillColor: Colors.white,
+        fillColor: AppColors.white,
         contentPadding: const EdgeInsets.symmetric(
           horizontal: 16,
           vertical: 16,
@@ -68,7 +68,7 @@ class CustomTextField extends StatelessWidget {
       ),
       style: GoogleFonts.inter(
         fontSize: 16,
-        color: Colors.grey[900],
+        color: AppColors.grey900,
       ),
     );
   }

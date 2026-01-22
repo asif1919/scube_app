@@ -59,8 +59,8 @@ class _LoginScreenState extends State<LoginScreen>
   @override
   Widget build(BuildContext context) {
     final screenHeight = MediaQuery.of(context).size.height;
-    final topSectionHeight = screenHeight * 0.42; // 40% of screen
-    final bottomSectionHeight = screenHeight * 0.62; // 60% of screen
+    final topSectionHeight = screenHeight * 0.40; // 40% of screen
+    final bottomSectionHeight = screenHeight * 0.60; // 60% of screen
 
     return Scaffold(
       backgroundColor: AppColors.splashBackground,
@@ -88,7 +88,7 @@ class _LoginScreenState extends State<LoginScreen>
                   child: Container(
                     width: double.infinity,
                     decoration: const BoxDecoration(
-                      color: Colors.white,
+                      color: AppColors.white,
                       borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(20),
                         topRight: Radius.circular(20),
@@ -148,7 +148,7 @@ class _LoginScreenState extends State<LoginScreen>
                                 "Don't have any account?",
                                 style: GoogleFonts.inter(
                                   fontSize: 13,
-                                  color: Colors.black,
+                                  color: AppColors.textBlack,
                                 ),
                               ),
                               const SizedBox(width: 5),

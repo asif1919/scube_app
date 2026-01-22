@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import '../../../core/constants/app_colors.dart';
 
 class WeatherSection extends StatelessWidget {
   const WeatherSection({super.key});
@@ -53,7 +54,7 @@ class WeatherSection extends StatelessWidget {
                 gradient: const LinearGradient(
                   begin: Alignment.centerLeft,
                   end: Alignment.centerRight,
-                  colors: [Color(0xFF2E63F7), Color(0xFFB982D9)],
+                  colors: [AppColors.gradientBlue, AppColors.gradientPurple],
                 ),
               ),
               padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 0),
@@ -72,35 +73,44 @@ class WeatherSection extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              // Wind speed
-                              RichText(
-                                text: TextSpan(
-                                  children: [
-                                    TextSpan(
-                                      text: '26',
-                                      style: GoogleFonts.inter(
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.w700,
-                                        color: Colors.white,
+                              // Wind speed - Fixed: Wrapped in FittedBox
+                              FittedBox(
+                                fit: BoxFit.scaleDown,
+                                alignment: Alignment.centerLeft,
+                                child: RichText(
+                                  text: TextSpan(
+                                    children: [
+                                      TextSpan(
+                                        text: '26',
+                                        style: GoogleFonts.inter(
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.w700,
+                                          color: AppColors.white,
+                                        ),
                                       ),
-                                    ),
-                                    TextSpan(
-                                      text: ' MPH / NW',
-                                      style: GoogleFonts.inter(
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.w600,
-                                        color: Colors.white,
+                                      TextSpan(
+                                        text: ' MPH / NW',
+                                        style: GoogleFonts.inter(
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.w600,
+                                          color: AppColors.white,
+                                        ),
                                       ),
-                                    ),
-                                  ],
+                                    ],
+                                  ),
                                 ),
                               ),
-                              Text(
-                                'Wind Speed & Direction',
-                                style: GoogleFonts.inter(
-                                  fontSize: 10,
-                                  fontWeight: FontWeight.w400,
-                                  color: Colors.white.withOpacity(0.9),
+                              // Wind Label - Fixed: Wrapped in FittedBox
+                              FittedBox(
+                                fit: BoxFit.scaleDown,
+                                alignment: Alignment.centerLeft,
+                                child: Text(
+                                  'Wind Speed & Direction',
+                                  style: GoogleFonts.inter(
+                                    fontSize: 10,
+                                    fontWeight: FontWeight.w400,
+                                    color: AppColors.white.withOpacity(0.9),
+                                  ),
                                 ),
                               ),
                               // Divider line
@@ -117,40 +127,49 @@ class WeatherSection extends StatelessWidget {
                                     begin: Alignment.centerLeft,
                                     end: Alignment.centerRight,
                                     colors: [
-                                      Colors.white.withOpacity(0.0),
-                                      Colors.white.withOpacity(1.0),
-                                      Colors.white.withOpacity(0.0),
+                                      AppColors.white.withOpacity(0.0),
+                                      AppColors.white.withOpacity(1.0),
+                                      AppColors.white.withOpacity(0.0),
                                     ],
                                     stops: const [0.0, 0.5, 1.0],
                                   ),
                                 ),
                               ),
-                              // Irradiation
-                              Row(
-                                children: [
-                                  Text(
-                                    '15.20',
-                                    style: GoogleFonts.inter(
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.w700,
-                                      color: Colors.white,
+                              // Irradiation - Fixed: Wrapped Row in FittedBox
+                              FittedBox(
+                                fit: BoxFit.scaleDown,
+                                alignment: Alignment.centerLeft,
+                                child: Row(
+                                  children: [
+                                    Text(
+                                      '15.20',
+                                      style: GoogleFonts.inter(
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.w700,
+                                        color: AppColors.white,
+                                      ),
                                     ),
-                                  ),
-                                  Text(
-                                    ' w/m²',
-                                    style: GoogleFonts.inter(
-                                      fontSize: 16,
-                                      color: Colors.white,
+                                    Text(
+                                      ' w/m²',
+                                      style: GoogleFonts.inter(
+                                        fontSize: 16,
+                                        color: AppColors.white,
+                                      ),
                                     ),
-                                  ),
-                                ],
+                                  ],
+                                ),
                               ),
-                              Text(
-                                'Effective Irradiation',
-                                style: GoogleFonts.inter(
-                                  fontSize: 10,
-                                  fontWeight: FontWeight.w400,
-                                  color: Colors.white.withOpacity(0.9),
+                              // Irradiation Label - Fixed: Wrapped in FittedBox
+                              FittedBox(
+                                fit: BoxFit.scaleDown,
+                                alignment: Alignment.centerLeft,
+                                child: Text(
+                                  'Effective Irradiation',
+                                  style: GoogleFonts.inter(
+                                    fontSize: 10,
+                                    fontWeight: FontWeight.w400,
+                                    color: AppColors.white.withOpacity(0.9),
+                                  ),
                                 ),
                               ),
                             ],
@@ -182,48 +201,61 @@ class WeatherSection extends StatelessWidget {
               width: 155,
               padding: const EdgeInsets.fromLTRB(12, 0, 5, 0),
               decoration: BoxDecoration(
-                color: Colors.white,
+                color: AppColors.white,
                 borderRadius: BorderRadius.circular(10),
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Row(
-                        crossAxisAlignment: CrossAxisAlignment.end,
-                        children: [
-                          Text(
-                            temperatureValue,
-                            style: GoogleFonts.inter(
-                              fontSize: 24,
-                              fontWeight: FontWeight.w600,
-                              color: const Color(0xFF0090FF),
-                            ),
+                  // Wrapped Column in Expanded to prevent horizontal overflow in Row
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        // Temperature Value - Fixed: Wrapped in FittedBox
+                        FittedBox(
+                          fit: BoxFit.scaleDown,
+                          alignment: Alignment.centerLeft,
+                          child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.end,
+                            children: [
+                              Text(
+                                temperatureValue,
+                                style: GoogleFonts.inter(
+                                  fontSize: 24,
+                                  fontWeight: FontWeight.w600,
+                                  color: AppColors.temperatureBlue,
+                                ),
+                              ),
+                              Text(
+                                '°C',
+                                style: GoogleFonts.inter(
+                                  fontSize: 18,
+                                  color: AppColors.temperatureBlue,
+                                ),
+                              ),
+                            ],
                           ),
-                          Text(
-                            '°C',
-                            style: GoogleFonts.inter(
-                              fontSize: 18,
-                              color: const Color(0xFF0090FF),
-                            ),
-                          ),
-                        ],
-                      ),
-                      const SizedBox(height: 6),
-                      Text(
-                        'Module\nTemperature',
-                        style: GoogleFonts.inter(
-                          fontSize: 10,
-                          height: 1.2,
-                          fontWeight: FontWeight.w500,
-                          color: const Color(0xFF555555),
                         ),
-                      ),
-                    ],
+                        const SizedBox(height: 6),
+                        // Module Label - Fixed: Wrapped in FittedBox
+                        FittedBox(
+                          fit: BoxFit.scaleDown,
+                          alignment: Alignment.centerLeft,
+                          child: Text(
+                            'Module\nTemperature',
+                            style: GoogleFonts.inter(
+                              fontSize: 10,
+                              height: 1.2,
+                              fontWeight: FontWeight.w500,
+                              color: AppColors.textDarkGrey,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                   const SizedBox(width: 6),
                   Image.asset(

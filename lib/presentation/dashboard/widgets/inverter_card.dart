@@ -66,7 +66,7 @@ class InverterCard extends StatelessWidget {
                     style: GoogleFonts.inter(
                       fontSize: 10,
                       fontWeight: FontWeight.w700,
-                      color: const Color(0xFF0684D9),
+                      color: AppColors.statusBlue,
                     ),
                   ),
                 ],

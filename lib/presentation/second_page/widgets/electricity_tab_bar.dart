@@ -60,7 +60,7 @@ class _TabItem extends StatelessWidget {
         child: Container(
           padding: const EdgeInsets.symmetric(vertical: 12),
           decoration: BoxDecoration(
-            color: isSelected ? AppColors.splashBackground : Colors.white,
+            color: isSelected ? AppColors.splashBackground : AppColors.white,
             borderRadius: const BorderRadius.only(
               topLeft: Radius.circular(10),
               topRight: Radius.circular(10),
@@ -80,7 +80,7 @@ class _TabItem extends StatelessWidget {
             style: GoogleFonts.inter(
               fontSize: 14,
               fontWeight: FontWeight.w600,
-              color: isSelected ? Colors.white : AppColors.textSecondary,
+              color: isSelected ? AppColors.white : AppColors.textSecondary,
             ),
           ),
         ),

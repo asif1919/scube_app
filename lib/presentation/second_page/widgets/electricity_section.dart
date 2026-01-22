@@ -26,7 +26,7 @@ class _ElectricitySectionState extends State<ElectricitySection> {
     return Container(
       margin: const EdgeInsets.fromLTRB(12, 0, 12, 16),
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: AppColors.white,
         borderRadius: BorderRadius.circular(10),
       ),
       child: Column(

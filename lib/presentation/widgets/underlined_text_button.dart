@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import '../../core/constants/app_colors.dart';
 
 /// Reusable Underlined Text Button Widget 
 class UnderlinedTextButton extends StatelessWidget {
@@ -34,9 +35,9 @@ class UnderlinedTextButton extends StatelessWidget {
         style: GoogleFonts.inter(
           fontSize: fontSize,
           fontWeight: fontWeight,
-          color: textColor ?? Colors.grey[700],
+          color: textColor ?? AppColors.grey700,
           decoration: TextDecoration.underline,
-          decorationColor: textColor ?? Colors.grey[700],
+          decorationColor: textColor ?? AppColors.grey700,
         ),
       ),
     );

@@ -19,9 +19,9 @@ class ElectricityDonutChart extends StatelessWidget {
             child: CircularProgressIndicator(
               value: 1,
               strokeWidth: 22,
-              backgroundColor: Colors.transparent,
+              backgroundColor: AppColors.transparent,
               valueColor: const AlwaysStoppedAnimation(
-                Color(0xFFD6ECFF), // light blue ring
+                AppColors.donutRingBlue, // light blue ring
               ),
             ),
           ),
@@ -34,7 +34,7 @@ class ElectricityDonutChart extends StatelessWidget {
               child: CircularProgressIndicator(
                 value: 0.65,
                 strokeWidth: 22,
-                backgroundColor: Colors.transparent,
+                backgroundColor: AppColors.transparent,
                 valueColor: const AlwaysStoppedAnimation(
                   AppColors.splashBackground, // solid blue
                 ),
@@ -50,7 +50,7 @@ class ElectricityDonutChart extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 12,
                   fontWeight: FontWeight.w500,
-                  color: Color(0xFF1F2A44),
+                  color: AppColors.textDarkBlue,
                 ),
               ),
               Text(
@@ -58,7 +58,7 @@ class ElectricityDonutChart extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.w600,
-                  color: Color(0xFF1F2A44),
+                  color: AppColors.textDarkBlue,
                 ),
               ),
             ],

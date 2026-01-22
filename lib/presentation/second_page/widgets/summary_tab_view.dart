@@ -31,7 +31,7 @@ class _SummaryTabViewState extends State<SummaryTabView> {
             style: GoogleFonts.inter(
               fontSize: 16,
               fontWeight: FontWeight.w600,
-              color: const Color(0xFF979797),
+              color: AppColors.textGrey,
             ),
           ),
           const SizedBox(height: 8),
@@ -51,7 +51,7 @@ class _SummaryTabViewState extends State<SummaryTabView> {
             },
           ),
           const SizedBox(height: 5),
-          const Divider(height: 1, color: Colors.grey, thickness: 1.5),
+          const Divider(height: 1, color: AppColors.grey600, thickness: 1.5),
           const SizedBox(height: 10),
           ScrollableDataViewList(
             scrollController: widget.scrollController,

@@ -41,13 +41,13 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
               onPressed: () {},
             ),
             Positioned(
-              right: 12,
-              top: 12,
+              right: 15,
+              top: 15,
               child: Container(
-                width: 8,
-                height: 8,
+                width: 9,
+                height: 9,
                 decoration: const BoxDecoration(
-                  color: Colors.red,
+                  color: AppColors.errorRed,
                   shape: BoxShape.circle,
                 ),
               ),

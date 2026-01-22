@@ -102,7 +102,7 @@ class DataViewCard extends StatelessWidget {
                       style: GoogleFonts.inter(
                         fontSize: 10,
                         fontWeight: FontWeight.w600,
-                        color: isActive ? const Color(0xFF0684D9) : Colors.red,
+                        color: isActive ? AppColors.statusBlue : AppColors.errorRed,
                       ),
                     ),
                   ],
@@ -142,7 +142,7 @@ class DataViewCard extends StatelessWidget {
           TextSpan(
             text: value,
             style: const TextStyle(
-              color: Colors.black, // Value color is Black
+              color: AppColors.textBlack, // Value color is Black
               fontWeight: FontWeight.w600,
             ),
           ),

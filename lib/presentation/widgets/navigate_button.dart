@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import '../../core/constants/app_colors.dart';
 
 class NavigateButton extends StatelessWidget {
   final String text;
@@ -21,7 +22,7 @@ class NavigateButton extends StatelessWidget {
         height: 32,
         width: double.infinity,
         decoration: BoxDecoration(
-          color: const Color(0xFF00c0e8),
+          color: AppColors.buttonCyan,
           borderRadius: BorderRadius.circular(5),
         ),
         child: Row(
@@ -32,11 +33,11 @@ class NavigateButton extends StatelessWidget {
               style: GoogleFonts.inter(
                 fontSize: 12,
                 fontWeight: FontWeight.w600,
-                color: Colors.white,
+                color: AppColors.white,
               ),
             ),
             SizedBox(width: iconSpacing ?? 12),
-            const Icon(Icons.arrow_forward_ios, size: 14, color: Colors.white),
+            const Icon(Icons.arrow_forward_ios, size: 14, color: AppColors.white),
           ],
         ),
       ),

@@ -15,7 +15,7 @@ class _TabBarSectionState extends State<TabBarSection> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.white,
+      color: AppColors.white,
       child: Column(
         children: [
           Row(
@@ -27,8 +27,8 @@ class _TabBarSectionState extends State<TabBarSection> {
                     padding: const EdgeInsets.symmetric(vertical: 12),
                     decoration: BoxDecoration(
                       color: _selectedIndex == 0
-                          ? const Color(0xFF00C0E8)
-                          : Colors.white,
+                          ? AppColors.buttonCyan
+                          : AppColors.white,
                       borderRadius: const BorderRadius.only(
                         topLeft: Radius.circular(8),
                         topRight: Radius.circular(8),
@@ -41,7 +41,7 @@ class _TabBarSectionState extends State<TabBarSection> {
                         fontSize: 14,
                         fontWeight: FontWeight.w600,
                         color: _selectedIndex == 0
-                            ? Colors.white
+                            ? AppColors.white
                             : AppColors.textPrimary,
                       ),
                     ),
@@ -54,11 +54,11 @@ class _TabBarSectionState extends State<TabBarSection> {
                   child: Container(
                     padding: const EdgeInsets.symmetric(vertical: 12),
                     decoration: BoxDecoration(
-                      color: Colors.white,
+                      color: AppColors.white,
                       border: Border(
                         bottom: BorderSide(
                           color: _selectedIndex == 1
-                              ? Colors.transparent
+                              ? AppColors.transparent
                               : AppColors.borderLight,
                           width: 1,
                         ),
@@ -82,11 +82,11 @@ class _TabBarSectionState extends State<TabBarSection> {
                   child: Container(
                     padding: const EdgeInsets.symmetric(vertical: 12),
                     decoration: BoxDecoration(
-                      color: Colors.white,
+                      color: AppColors.white,
                       border: Border(
                         bottom: BorderSide(
                           color: _selectedIndex == 2
-                              ? Colors.transparent
+                              ? AppColors.transparent
                               : AppColors.borderLight,
                           width: 1,
                         ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../../core/constants/app_colors.dart';
 import 'data_view_list.dart';
 import 'custom_scrollbar.dart';
 
@@ -27,8 +28,8 @@ class ScrollableDataViewList extends StatelessWidget {
                   isActive: true,
                   data1: '55505.63',
                   data2: '58805.63',
-                  color: Color(0xFF78c6ff),
-                  backgroundColor: Color(0xFFE5F4FE),
+                  color: AppColors.dataViewBlue,
+                  backgroundColor: AppColors.dataViewBackgroundBlue,
                 ),
                 SizedBox(height: 8),
                 DataViewCard(
@@ -38,8 +39,8 @@ class ScrollableDataViewList extends StatelessWidget {
                   isActive: true,
                   data1: '55505.63',
                   data2: '58805.63',
-                  color: Color(0xFFFFA500),
-                  backgroundColor: Color(0xFFE5F4FE),
+                  color: AppColors.dataViewOrange,
+                  backgroundColor: AppColors.dataViewBackgroundBlue,
                 ),
                 SizedBox(height: 8),
                 DataViewCard(
@@ -49,8 +50,8 @@ class ScrollableDataViewList extends StatelessWidget {
                   isActive: false,
                   data1: '55505.63',
                   data2: '58805.63',
-                  color: Color(0xFF78c6ff),
-                  backgroundColor: Color(0xFFE5F4FE),
+                  color: AppColors.dataViewBlue,
+                  backgroundColor: AppColors.dataViewBackgroundBlue,
                 ),
                 SizedBox(height: 8),
                 DataViewCard(
@@ -60,8 +61,8 @@ class ScrollableDataViewList extends StatelessWidget {
                   isActive: true,
                   livePower: '55505.63 kW',
                   todayEnergy: '58805.63 kWh',
-                  color: Color(0xFF78c6ff),
-                  backgroundColor: Color(0xFFF0F1FF),
+                  color: AppColors.dataViewBlue,
+                  backgroundColor: AppColors.dataViewBackgroundPurple,
                 ),
               ],
             ),

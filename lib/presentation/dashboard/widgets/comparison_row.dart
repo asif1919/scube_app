@@ -23,7 +23,7 @@ class ComparisonRow extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 12),
       decoration: BoxDecoration(
-        color: isHighlighted ? const Color(0xFFEEF3F9) : Colors.transparent,
+        color: isHighlighted ? AppColors.rowHighlight : AppColors.transparent,
         border: isLast
             ? null
             : const Border(

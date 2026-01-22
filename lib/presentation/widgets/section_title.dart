@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import '../../core/constants/app_colors.dart';
 
 /// Reusable Section Title Widget 
 class SectionTitle extends StatelessWidget {
@@ -26,7 +27,7 @@ class SectionTitle extends StatelessWidget {
             style: GoogleFonts.inter(
               fontSize: fontSize,
               fontWeight: FontWeight.w700,
-              color: color ?? Colors.grey[900],
+              color: color ?? AppColors.grey900,
             ),
           ),
           const SizedBox(width: 8),
@@ -34,7 +35,7 @@ class SectionTitle extends StatelessWidget {
             width: 8,
             height: 8,
             decoration: const BoxDecoration(
-              color: Colors.red,
+              color: AppColors.errorRed,
               shape: BoxShape.circle,
             ),
           ),
@@ -47,7 +48,7 @@ class SectionTitle extends StatelessWidget {
       style: GoogleFonts.inter(
         fontSize: fontSize,
         fontWeight: FontWeight.w700,
-        color: color ?? const Color(0xFF082438),
+        color: color ?? AppColors.textPrimary,
       ),
     );
   }

@@ -42,7 +42,7 @@ class SourceLoadToggle extends StatelessWidget {
                       fontSize: 14,
                       fontWeight: FontWeight.w600,
                       color: isSourceSelected
-                          ? Colors.white
+                          ? AppColors.white
                           : AppColors.textSecondary,
                     ),
                   ),
@@ -68,7 +68,7 @@ class SourceLoadToggle extends StatelessWidget {
                       fontSize: 14,
                       fontWeight: FontWeight.w600,
                       color: !isSourceSelected
-                          ? Colors.white
+                          ? AppColors.white
                           : AppColors.textSecondary,
                     ),
                   ),

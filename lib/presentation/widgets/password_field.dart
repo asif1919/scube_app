@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../core/constants/app_colors.dart';
 import 'custom_text_field.dart';
 
 /// Reusable Password Field Widget 
@@ -36,7 +37,7 @@ class _PasswordFieldState extends State<PasswordField> {
           _obscurePassword
               ? Icons.visibility_outlined
               : Icons.visibility_off_outlined,
-          color: Colors.grey[600],
+          color: AppColors.grey600,
         ),
         onPressed: () {
           setState(() {

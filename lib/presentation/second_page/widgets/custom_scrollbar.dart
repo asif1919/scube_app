@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../../core/constants/app_colors.dart';
 
 class CustomScrollbar extends StatefulWidget {
   final ScrollController controller;
@@ -70,7 +71,7 @@ class _CustomScrollbarState extends State<CustomScrollbar> {
         width: 8,
         margin: const EdgeInsets.symmetric(vertical: 4),
         decoration: BoxDecoration(
-          color: Colors.grey[300],
+          color: AppColors.grey300,
           borderRadius: BorderRadius.circular(4),
         ),
         child: Stack(
@@ -81,7 +82,7 @@ class _CustomScrollbarState extends State<CustomScrollbar> {
                 width: 8,
                 height: thumbHeight,
                 decoration: BoxDecoration(
-                  color: Colors.grey[600],
+                  color: AppColors.grey600,
                   borderRadius: BorderRadius.circular(4),
                 ),
               ),
