@@ -74,28 +74,45 @@ This project follows **Clean Architecture** principles:
 
 ## Screenshots
 
+<table>
+<tr>
+<td width="25%">
+<img src="https://raw.githubusercontent.com/asif1919/scube_app/master/assets/app_screenshorts/1-%20Splash_screen.jpg" width="100%">
+<p align="center"><b>Splash Screen</b></p>
+</td>
+<td width="25%">
+<img src="https://raw.githubusercontent.com/asif1919/scube_app/master/assets/app_screenshorts/2-%20Login_screen.jpg" width="100%">
+<p align="center"><b>Login Screen</b></p>
+</td>
+<td width="25%">
+<img src="https://raw.githubusercontent.com/asif1919/scube_app/master/assets/app_screenshorts/3-%20Dashboard.jpg" width="100%">
+<p align="center"><b>Dashboard Screen</b></p>
+</td>
+<td width="25%">
+<img src="https://raw.githubusercontent.com/asif1919/scube_app/master/assets/app_screenshorts/4-%202nd_page.png" width="100%">
+<p align="center"><b>Second Page Screen</b></p>
+</td>
+</tr>
+</table>
+
 ### Splash Screen
-![Splash Screen](https://raw.githubusercontent.com/asif1919/scube_app/master/assets/app_screenshorts/1-%20Splash_screen.jpg)
 - Blue background (#0096FC)
 - App logo and branding
 - Smooth transition to login
 
 ### Login Screen
-![Login Screen](https://raw.githubusercontent.com/asif1919/scube_app/master/assets/app_screenshorts/2-%20Login_screen.jpg)
 - Blue header section with logo
 - White form section with slide-up animation
 - Username and password fields
 - Forgot password and registration links
 
 ### Dashboard Screen
-![Dashboard Screen](https://raw.githubusercontent.com/asif1919/scube_app/master/assets/app_screenshorts/3-%20Dashboard.jpg)
 - Comprehensive metrics display (Total Energy, Plant Generation, Live AC Power, etc.)
 - Weather section with temperature, wind, and irradiation data
 - Inverter list with detailed cards showing energy metrics
 - Navigation to second page
 
 ### Second Page Screen
-![Second Page Screen](https://raw.githubusercontent.com/asif1919/scube_app/master/assets/app_screenshorts/4-%202nd_page.png)
 - Tab-based navigation (Summary, SLD, Data)
 - Electricity monitoring with donut chart
 - Source/Load toggle functionality
